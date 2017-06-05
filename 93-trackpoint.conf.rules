@@ -1,0 +1,3 @@
+KERNEL=="event[0-9]*", SUBSYSTEM=="input", SUBSYSTEMS=="input", 
+ATTRS{name}=="TPPS/2 IBM TrackPoint", SYMLINK+="my_trackpoint", 
+TAG+="uaccess"
