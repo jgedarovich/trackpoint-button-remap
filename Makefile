@@ -1,5 +1,5 @@
 
 install:
-	echo "do nothing"
+	pwd
 	ls -lrta
 	ls -lrta etc/systemd/system
