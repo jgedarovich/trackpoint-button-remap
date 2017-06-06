@@ -1,6 +1,3 @@
-REQUIRES UINPUT KERNEL MODULE ENABLED!!
-
-
 http://superuser.com/questions/883782/how-do-i-properly-map-a-keyboard-key-to-a-mouse-button
 An askubuntu post contains an answer that I will summarize below.
 

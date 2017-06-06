@@ -1,21 +1,18 @@
 with import <nixpkgs> {};
+{ stdenv, fetchgit, perl }:
 
 stdenv.mkDerivation {
-  name = "trackpointbuttonremap-0.0.0";
-  
+  name = "tpremap";
+
   src = fetchgit {
     url= "https://github.com/jgedarovich/trackpoint-button-remap.git";
-    rev = "6706e3abe5df0090be4b02c521c36b64e8c72117";
+    rev = "b6113055a17908e5d5c682a9890b375e9a28a038";
   };
-  
+
   buildInputs = [ python3 python35Packages.evdev python35Packages.python-uinput ];
 
   installPhase = ''
-      mkdir -p $out
-      cp -R * $out/
-    '';
+    bash ./install.sh $out
+  '';
 
-  meta = {
-    description = "remap the thinkpad trackpoint mouse buttons to meta keys instead";
-  };
 }

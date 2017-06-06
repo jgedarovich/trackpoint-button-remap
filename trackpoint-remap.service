@@ -3,9 +3,8 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/trackpoint-button-remap
+ExecStart=/usr/bin/python3.5 /usr/local/bin/remap.py
 
 [Install]
 # Needed to run at boot
 WantedBy=multi-user.target
-
