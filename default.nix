@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation {
-  name = "trackpointRemapKeys-0.0.0";
+  name = "trackpointbuttonremap-0.0.0";
   
   src = fetchgit {
     url= "https://github.com/jgedarovich/trackpoint-button-remap.git";
@@ -12,18 +12,5 @@ stdenv.mkDerivation {
 
   meta = {
     description = "remap the thinkpad trackpoint mouse buttons to meta keys instead";
-  };
-
-  systemd.services.trackpoint-button-remap = {
-      description = "remap lenovo x1 carbon buttons to metas";
-      after = [ "network.target" ];
-      wantedBy = [ "multi-user.target" ];
-      #path = cfg.packages;
-      serviceConfig = {
-        Type = "simple";
-        ExecStart = ''
-            ${pkgs.trackpoint-button-remap}/bin/trackpoint-button-remap
-            '';
-      };
   };
 }

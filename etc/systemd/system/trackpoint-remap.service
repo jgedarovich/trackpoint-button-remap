@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/trackpoint-button-remap
+
+[Install]
+# Needed to run at boot
+WantedBy=multi-user.target
+
