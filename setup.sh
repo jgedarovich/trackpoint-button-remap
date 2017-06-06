@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-PREFIX=${prefix:-/usr/local}
+PREFIX=${1:-/usr/local}
 
 echo Okay, time to install this puppy.
 set -x
