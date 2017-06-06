@@ -5,10 +5,15 @@ stdenv.mkDerivation {
   
   src = fetchgit {
     url= "https://github.com/jgedarovich/trackpoint-button-remap.git";
-    rev = "6e500897f93a54a17e60d1b6b27bf7edd94491c1";
+    rev = "d0f30aae908a90d940c04c1db88f5937e36e3bba";
   };
   
   buildInputs = [ python3 python35Packages.evdev python35Packages.python-uinput ];
+
+  postInstall = ''
+    cp -v etc/systemd/system/* $out/etc/systemd/system/
+    cp -v etc/udev/rules.d/* $out/etc/udev/rules.d/
+    '';
 
   meta = {
     description = "remap the thinkpad trackpoint mouse buttons to meta keys instead";
