@@ -22,6 +22,8 @@ stdenv.mkDerivation {
   ];
 
   installPhase = ''
+    install -D 94-trackpoint.rules $out/etc/udev/rules.d/94-trackpoint.rules
+    install -D 93-trackpoint.conf.rules $out/etc/udev/rules.d/93-trackpoint.conf.rules
     bash ./setup.sh $out
   '';
 

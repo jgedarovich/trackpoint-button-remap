@@ -49,7 +49,7 @@ for event in dev.read_loop():
         elif event.value == 0:
             ctrl_keyboard.emit(uinput.KEY_LEFTMETA, 0)
             ctrlkey_on = False
-    if event.code == 273:
+    if event.code == 272:
 	# Button status, 1 is down, 0 is up
         if event.value == 1:
             ctrl_keyboard.emit(uinput.KEY_LEFTALT, 1)
@@ -57,7 +57,7 @@ for event in dev.read_loop():
         elif event.value == 0:
             ctrl_keyboard.emit(uinput.KEY_LEFTALT, 0)
             ctrlkey_on = False
-    if event.code == 272:
+    if event.code == 273:
         # Button status, 1 is down, 0 is up
         if event.value == 1:
             ctrl_keyboard.emit(uinput.KEY_LEFTCTRL, 1)
