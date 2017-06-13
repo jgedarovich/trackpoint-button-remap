@@ -5,7 +5,7 @@ stdenv.mkDerivation {
 
   src = fetchgit {
     url= "https://github.com/jgedarovich/trackpoint-button-remap.git";
-    rev = "c2b7eba6cb6263f31baf6f95e5fd98cb4b340f79";
+    rev = "35543efd3e5fc5fbffd88124b4140ea3b4eb8c60";
   };
 
   buildInputs = [ 
