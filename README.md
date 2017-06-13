@@ -1,3 +1,8 @@
+❯ tar czvf tpbr.tar.gz trackpoint-button-remap
+nix-build default.nix
+nix-env -f default.nix -i
+sudo nixos-rebuild switch
+
 http://superuser.com/questions/883782/how-do-i-properly-map-a-keyboard-key-to-a-mouse-button
 An askubuntu post contains an answer that I will summarize below.
 

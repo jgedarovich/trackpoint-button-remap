@@ -3,10 +3,7 @@ with import <nixpkgs> {};
 stdenv.mkDerivation {
   name = "tpremap";
 
-  src = fetchgit {
-    url= "https://github.com/jgedarovich/trackpoint-button-remap.git";
-    rev = "ea0e89b008b9ca91179696fa23223d26e0861380";
-  };
+  src = /home/jgedarovich/development/tpbr.tar.gz;
 
   buildInputs = [ 
     libevdev
