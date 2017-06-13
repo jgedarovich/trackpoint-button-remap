@@ -23,7 +23,7 @@ cp *.conf $PREFIX/etc/modules-load.d/
 # KERNEL=="uinput", TAG+="uaccess"
 
 
-udevadm trigger
+#udevadm trigger
 #sudo cp trackpoint-remap.service /etc/systemd/system
 #sudo systemctl daemon-reload
 #sudo systemctl enable trackpoint-remap.service
