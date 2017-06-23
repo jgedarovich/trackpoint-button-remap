@@ -40,8 +40,17 @@ ctrlkey_on = False
 
 # Infinite monitoring loop
 for event in dev.read_loop():
-    #print(event.code)
-    # My thumb button code (use "print(event)" to find)
+    print(event.code)
+    # LEFT MOST KEY 272
+    if event.code == 272:
+        # Button status, 1 is down, 0 is up
+        if event.value == 1:
+            ctrl_keyboard.emit(uinput.KEY_LEFTCTRL, 1)
+            ctrlkey_on = True
+        elif event.value == 0:
+            ctrl_keyboard.emit(uinput.KEY_LEFTCTRL, 0)
+            ctrlkey_on = False
+    # MIDDLE MOST KEY 274
     if event.code == 274:
 	# Button status, 1 is down, 0 is up
         if event.value == 1:
@@ -50,19 +59,12 @@ for event in dev.read_loop():
         elif event.value == 0:
             ctrl_keyboard.emit(uinput.KEY_LEFTMETA, 0)
             ctrlkey_on = False
-    if event.code == 272:
-	# Button status, 1 is down, 0 is up
+    # RIGHT MOST KEY 273
+    if event.code == 273:
+        # Button status, 1 is down, 0 is up
         if event.value == 1:
             ctrl_keyboard.emit(uinput.KEY_LEFTALT, 1)
             ctrlkey_on = True
         elif event.value == 0:
             ctrl_keyboard.emit(uinput.KEY_LEFTALT, 0)
-            ctrlkey_on = False
-    if event.code == 273:
-        # Button status, 1 is down, 0 is up
-        if event.value == 1:
-            ctrl_keyboard.emit(uinput.KEY_LEFTCTRL, 1)
-            ctrlkey_on = True
-        elif event.value == 0:
-            ctrl_keyboard.emit(uinput.KEY_LEFTCTRL, 0)
             ctrlkey_on = False
