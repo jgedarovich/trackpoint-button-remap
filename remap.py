@@ -7,6 +7,7 @@ Read a specific InputDevice (my_trackpoint),
 monitoring for special thumb button
 Use uinput (virtual driver) to create a mini keyboard
 Send ctrl keystroke on that keyboard
+test
 """
 
 from evdev import InputDevice, categorize, ecodes
