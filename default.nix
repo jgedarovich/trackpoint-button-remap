@@ -8,9 +8,9 @@ stdenv.mkDerivation {
   buildInputs = [ 
     libevdev
     # With Python configuration requiring a special wrapper
-    (python35.buildEnv.override {
+    (python3.buildEnv.override {
       ignoreCollisions = true;
-      extraLibs = with python35Packages; [
+      extraLibs = with python3Packages; [
         python
         evdev
         python-uinput
